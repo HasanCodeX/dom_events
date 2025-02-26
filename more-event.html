@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events Practice</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Events Practice</h1>
+    <button id="clickButton">Click Me!</button>
+    <p id="hoverText">Hover over me!</p>
+    <input type="text" id="inputField" placeholder="Type something...">
+
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function() {
+            alert('Button was clicked!');
+        });
+
+        document.getElementById('hoverText').addEventListener('mouseover', function() {
+            this.classList.add('highlight');
+        });
+
+        document.getElementById('hoverText').addEventListener('mouseout', function() {
+            this.classList.remove('highlight');
+        });
+
+        document.getElementById('inputField').addEventListener('input', function() {
+            console.log('Input field value:', this.value);
+        });
+    </script>
+</body>
+</html></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Practice</title>
+    <style>
+        .container {
+            padding: 20px;
+            border: 2px solid black;
+        }
+        .box {
+            padding: 20px;
+            border: 2px solid red;
+            margin: 10px;
+        }
+        .inner-box {
+            padding: 20px;
+            border: 2px solid blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        Container
+        <div class="box" id="box">
+            Box
+            <div class="inner-box" id="inner-box">
+                Inner Box
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('container').addEventListener('click', function() {
+            alert('Container clicked!');
+        });
+
+        document.getElementById('box').addEventListener('click', function() {
+            alert('Box clicked!');
+        });
+
+        document.getElementById('inner-box').addEventListener('click', function() {
+            alert('Inner Box clicked!');
+        });
+    </script>
+</body>
+</html></div>

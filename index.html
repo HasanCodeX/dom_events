@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body>
+    <h1>DOM Practice</h1>
+    <button id="changeTextBtn">Change Text</button>
+    <p id="text">This is the original text.</p>
+
+    <button id="changeColorBtn">Change Color</button>
+    
+    <script> 
+        function makeRed() {
+            document.body.style.color = 'red';
+        }
+        document.getElementById('changeColorBtn').addEventListener('click', makeRed);
+        
+    </script>
+    <script src="./js/event.js">
+
+    </script>
+</body>
+
+</html>
